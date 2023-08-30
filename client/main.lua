@@ -4,7 +4,7 @@ elseif Config.Frameworks == 'QBCore' then
   QBCore = exports['qb-core']:GetCoreObject()
 end
 
-if Config.Frameworks = 'ESX' then
+if Config.Frameworks == 'ESX' then
   RegisterCommand(Config.Commands, function(source)
     TriggerEvent('gusti-boostfps:showMenu')
   end)
