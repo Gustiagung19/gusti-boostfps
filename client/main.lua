@@ -1,17 +1,13 @@
 if Config.Frameworks == 'ESX' then
-  ESX = exports['es_extended']:getSharedObject()
+    ESX = exports['es_extended']:getSharedObject()
 elseif Config.Frameworks == 'QBCore' then
-  QBCore = exports['qb-core']:GetCoreObject()
+    QBCore = exports['qb-core']:GetCoreObject()
 end
 
 if Config.Frameworks == 'ESX' then
-  RegisterCommand(Config.Commands, function(source)
-    TriggerEvent('gusti-boostfps:showMenu')
-  end)
-elseif Config.Frameworks == 'QBCore' then
-  QBCore.Commands.Add(Config.Commands, function(source)
-    TriggerEvent('gusti-boostfps:showMenu')
-  end)
+    RegisterCommand(Config.Commands, function(source)
+      TriggerEvent('gusti-boostfps:showMenu')
+    end)
 end
 
 RegisterNetEvent('gusti-boostfps:showMenu')
