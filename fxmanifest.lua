@@ -6,7 +6,7 @@ game 'gta5'
 -- [[ Resource Information ]] --
 name 'gusti-boostfps'
 author 'Gusti Agung'
-version '1.0.1'
+version '1.0.2'
 description 'The gusti-boostfps script is to make players boost their fps in the game, to prevent fps drops, stuttering, etc. from occurring.'
 
 shared_scripts {
