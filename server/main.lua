@@ -1,5 +1,18 @@
+if Config.Frameworks == 'ESX' then
+    ESX = exports['es_extended']:getSharedObject()
+elseif Config.Frameworks == 'QBCore' then
+    QBCore = exports['qb-core']:GetCoreObject()
+end
+
+if Config.Frameworks == 'QBCore' then
+    QBCore.Commands.Add(Config.Commands, "", {}, false, function(source)
+        local src = source
+        TriggerClientEvent('gusti-boostfps:showMenu', src)
+    end, 'user')
+end
+
 --[[ Version Checker ]]--
-local version = "1.0.1"
+local version = "1.0.2"
 
 AddEventHandler("onResourceStart", function(resource)
     if Config.CheckForUpdates then
